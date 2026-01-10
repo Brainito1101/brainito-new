@@ -4,7 +4,7 @@ import { Loader2, CheckCircle2, AlertCircle } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 
 // API base URL
-const API_BASE_URL = import.meta.env.VITE_API_URL || "https://ai.brainito.com/api";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "https://app.brainito.com/api";
 
 export default function GoogleCallback() {
     const navigate = useNavigate();

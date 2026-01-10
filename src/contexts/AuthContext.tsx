@@ -19,7 +19,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     const [user, setUser] = useState<User | null>(null);
     const [loading, setLoading] = useState(true);
 
-    const API_BASE_URL = import.meta.env.VITE_API_URL || "https://ai.brainito.com/api";
+    const API_BASE_URL = import.meta.env.VITE_API_URL || "https://app.brainito.com/api";
 
     useEffect(() => {
         const initializeAuth = async () => {

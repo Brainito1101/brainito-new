@@ -73,7 +73,7 @@ const HeroSection = () => {
     const accessToken = localStorage.getItem("access_token");
 
     // API base URL - use environment variable or fallback
-    const API_BASE_URL = import.meta.env.VITE_API_URL || "https://ai.brainito.com/api";
+    const API_BASE_URL = import.meta.env.VITE_API_URL || "https://app.brainito.com/api";
 
     try {
       // Check if user already has a report (free limit = 1)
@@ -89,7 +89,7 @@ const HeroSection = () => {
             const reportsData = await reportsRes.json();
             if (reportsData.success && Array.isArray(reportsData.reports) && reportsData.reports.length >= 1) {
               // User already has at least one report: redirect to dashboard (brainito-grow-hub-main)
-              window.location.href = "http://localhost:8081/dashboard?free_report_used=1";
+              window.location.href = "https://app.brainito.com/dashboard?free_report_used=1";
               return;
             }
           }
@@ -149,7 +149,7 @@ const HeroSection = () => {
 
       if (data.result) {
         // Redirect to the dashboard (brainito-grow-hub-main) with analysis_id
-        window.location.href = `http://localhost:8081/dashboard?analysis_id=${data.analysis_id}`;
+        window.location.href = `https://app.brainito.com/dashboard?analysis_id=${data.analysis_id}`;
       } else {
         setErrorMessage("Something went wrong. Please try again.");
       }
